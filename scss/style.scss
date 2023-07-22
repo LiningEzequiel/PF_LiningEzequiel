@@ -267,10 +267,12 @@ h4 {
 /*Inicio Header*/
 
 .header {
-    
+
     display: flex;
     justify-content: center;
     background-color: white;
+
+
 
     /*definimos un contenedor para centrar el header*/
     div.centroHeader {
@@ -283,29 +285,38 @@ h4 {
 
         /* creamos una clase para el logo del header*/
         .logo {
-            
+
             width: 300px;
             margin: 10px;
             padding: 10px;
         }
 
+
         nav.navbar {
-            
+
             display: flex;
             align-items: center;
 
             /*check-menu*/
-            #checkbox-menu,
-            label.menu {
+            #checkbox-menu {
                 display: none;
             }
 
+            
+            label.menu {
+                display: none;
+                font-size: 3rem;
+                color: black;
+                cursor: pointer;
+            }
+
+
             ul {
-                
+
                 display: flex;
 
                 li {
-                    
+
                     padding: 20px;
                     margin: 5px;
                     list-style: none;
@@ -322,7 +333,9 @@ h4 {
 
 
     }
+
 }
+
 
 /*Fin Header*/
 
@@ -362,7 +375,7 @@ h4 {
 
 // .fondo{
 //     background-color: red;
-    
+
 // }
 
 .contenedorAngosto {
@@ -484,7 +497,7 @@ h4 {
         align-items: center;
         justify-content: flex-start;
 
-        
+
     }
 
     .formContainer {
@@ -510,9 +523,9 @@ h4 {
                     margin: 5px;
                     border: none;
                 }
-            
+
             }
-        
+
             textarea {
                 background-color: #c5c4c43d;
                 width: 100%;
@@ -539,68 +552,119 @@ h4 {
 
     }
 
-} 
-
-
-// .form {
-//     /* background-color: yellow; */
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     flex-wrap: wrap;
-//     padding: 10px;
-
-// }
-
-// .form input {
-//     background-color: #c5c4c43d;
-//     width: 100%;
-
-// }
-
-// .form textarea {
-//     background-color: #c5c4c43d;
-//     width: 100%;
-//     min-height: 150px;
-// }
-
-// .input {
-//     padding: 6px;
-//     margin: 5px;
-//     border: none;
-// }
-
-
-
-/* .input:focus {
-    background: bisque;
-    outline: none;
-} */
-// .form .input:hover {
-//     border: 1px solid rgb(37, 36, 36)
-// }
-
-// .form input[type="submit"] {
-//     font-size: 1rem;
-//     font-family: 'Poppins', sans-serif;
-//     background-color: bisque;
-//     width: 30%;
-//     height: 3rem;
-//     align-self: flex-end;
-// }
-
-// .form input[type="submit"]:hover {
-//     background-color: rgb(105, 67, 46);
-// }
-
-
-// .formContainer {
-//     /* background-color: pink; */
-//     display: flex;
-//     /* flex-direction: column; */
-//     justify-content: center;
-//     align-items: center;
-// }
-
+}
 
 /*fin del estilo grid de contactos*/
+
+
+
+/*Inicio de MediaQueries*/
+
+
+@media (max-width: 480px) {
+
+
+    .centroHeader {
+        
+        width: 100%;
+
+        .logo {
+            /* background-color: yellow; */
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .navbar {
+
+
+
+            ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 120px;
+                right: 10px;
+                background-color: rgb(64, 65, 65);
+                border-radius: 20px;
+
+                
+            }
+
+            label.menu {
+                display: block;
+                margin-right: 20px;
+
+                
+            }
+
+            #checkbox-menu:checked~ul {
+                display: block;
+            }
+           
+        }
+        
+
+
+
+
+    }
+ 
+
+
+    .portada {
+        height: 350px;
+    }
+
+    .containerContacto {
+        display: grid;
+        width: 100%;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto auto 3fr 3fr;
+        row-gap: 5px;
+        grid-template-areas: "encabezadoContact"
+            "mensaje"
+            "direct1"
+            "direct2"
+            "mapsindustrial"
+            "mapsmaderera";
+    }
+
+
+
+
+    .mensaje {
+        background-color: rgba(245, 245, 220, 0.397);
+        border-radius: 10px;
+        grid-area: mensaje;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        div {
+            margin: 5px;
+            /* width: 100%; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: flex-start; */
+        }
+
+        H3 {
+            /* background-color: aqua; */
+            font-size: 1em;
+            text-align: center;
+            padding: 5px;
+        }
+    }
+
+    
+}
+
+
+
+
+
+/*Fin MediaQueries*/
