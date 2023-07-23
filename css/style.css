@@ -474,16 +474,23 @@ h4 {
 /*fin del estilo grid de contactos*/
 /*Inicio de MediaQueries*/
 @media (max-width: 480px) {
-  .centroHeader {
+  .header div.centroHeader {
     width: 100%;
   }
-  .centroHeader .logo {
+  .header div.centroHeader .logo {
     /* background-color: yellow; */
     width: 200px;
     margin: 10px;
     padding: 10px;
   }
-  .centroHeader .navbar ul {
+  .header div.centroHeader nav.navbar label.menu {
+    display: block;
+    margin-right: 20px;
+  }
+  .header div.centroHeader nav.navbar #checkbox-menu:checked ~ ul {
+    display: block;
+  }
+  .header div.centroHeader nav.navbar ul {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -491,13 +498,6 @@ h4 {
     right: 10px;
     background-color: rgb(64, 65, 65);
     border-radius: 20px;
-  }
-  .centroHeader .navbar label.menu {
-    display: block;
-    margin-right: 20px;
-  }
-  .centroHeader .navbar #checkbox-menu:checked ~ ul {
-    display: block;
   }
   .portada {
     height: 350px;
