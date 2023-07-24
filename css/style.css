@@ -58,10 +58,11 @@ h4 {
 
 /*defino una clase para tamaño de img de productos*/
 .boxProduct {
+  overflow: hidden;
   width: 300px;
   display: inline-block;
   margin: 20px;
-  transition: width 300ms;
+  transition: transform 300ms;
 }
 
 /*defino una clase para tamaño de img de productos*/
@@ -69,11 +70,12 @@ h4 {
   border-radius: 5px;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .boxProduct:hover {
-  background-color: aqua;
-  width: 350px;
+  background-color: beige;
+  transform: scale(1.1);
 }
 
 /*defino un class para color de textos sobre fondo de color*/
