@@ -1,6 +1,5 @@
 @charset "UTF-8";
-/*import*/
-/*resetamos los valores del navegador*/
+/*import*/ /*resetamos los valores del navegador*/
 * {
   padding: 0;
   box-sizing: border-box;
@@ -270,16 +269,15 @@ h4 {
 /*defino una clase para organizar el contenido de galeria*/
 .contenGaleria {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
+  padding: 20px;
 }
 
 /*defino un tamaño para la galeria*/
 .imagenGaleria {
-  width: 400px;
-  margin: 20px;
+  width: 80%;
+  max-width: 600px;
 }
 
 /* defino una clase para posicionar cajas genericas*/
@@ -573,7 +571,11 @@ h4 {
   }
 }
 @media screen and (min-width: 1320px) {
-  .mensaje, .direct1, .direct2, .mapsindustrial, .mapsmaderera {
+  .mensaje,
+  .direct1,
+  .direct2,
+  .mapsindustrial,
+  .mapsmaderera {
     width: 600px;
   }
   .contenedorImagen {
